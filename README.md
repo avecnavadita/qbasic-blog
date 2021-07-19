@@ -1,322 +1,442 @@
-# minima
+<!-- # This is blank
+### Thank you for visiting and see you soon
+#### In future days, if I will have any youtube channel, please it is my humble request, do subscribe, like, comment, hit the bell icon, and share. (And pls no bad comments) -->
 
-*Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.
+# QBASIC
 
-***Disclaimer:** The information here may vary depending on the version you're using. Please refer to the `README.md` bundled
-within the theme-gem for information specific to your version or by pointing your browser to the Git tag corresponding to your
-version. e.g. https://github.com/jekyll/minima/blob/v2.5.0/README.md*  
-*Running `bundle show minima` will provide you with the local path to your current theme version.*
+Learning QBASIC :)
 
+## Introduction
 
-[Theme preview](https://jekyll.github.io/minima/)
+BASIC is a programming language that was introduced at Dartmouth college in 1964. The full form of BASIC is Beginner's All Purpose Symbolic Instruction Code.
 
-![minima theme preview](/screenshot.png)
+After 21 years, later in 1985 Microsoft released their own version of BASIC called QBASIC with their MS-DOS operating system.
 
-## Installation
+QBASIC is a high level language. Instructions (or commands) are written using english words that we use in our day to day life (Eg, PRINT, INPUT, FOR, NEXT ...). The instructions are interpreted and executable file is generated when we run a QBASIC program.
 
-Add this line to your Jekyll site's Gemfile:
+Files written in QBASIC have a ```.BAS``` extension.
 
-```ruby
-gem "minima"
-```
+## Installing QBASIC
 
-And then execute:
+We need an editor and an interpreter to be able to write and execute QBASIC programs into our computer.
 
-    $ bundle
+QB64 is a program we are going to use for writing QBASIC program. 
 
+To download **QB64** for **Windows 10** in your computer from [Github](https://github.com/QB64Team/qb64/releases/tag/v1.5) or [QB64 website](https://www.qb64.org/portal/)
 
-## Contents At-A-Glance
+## Variables
 
-Minima has been scaffolded by the `jekyll new-theme` command and therefore has all the necessary files and directories to have a new Jekyll site up and running with zero-configuration.
+A variable is a name which can contain a value.
 
-### Layouts
+A variable has a type which is defined by the kind of value it holds.
 
-Refers to files within the `_layouts` directory, that define the markup for your theme.
+- String variable
+- Numeric variable (integer, long, single, double)
 
-  - `default.html` &mdash; The base layout that lays the foundation for subsequent layouts. The derived layouts inject their contents into this file at the line that says ` {{ content }} ` and are linked to this file via [FrontMatter](https://jekyllrb.com/docs/frontmatter/) declaration `layout: default`.
-  - `home.html` &mdash; The layout for your landing-page / home-page / index-page. [[More Info.](#home-layout)]
-  - `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts.
-  - `post.html` &mdash; The layout for your posts.
+If a variable holds symbols or texts, it is called a string variable (or character variable). If the variable holds a number, it is called long integer, single or double.
 
-#### Home Layout
+Integer and long can only store numbers. However, single and double can also store decimal values.
 
-`home.html` is a flexible HTML layout for the site's landing-page / home-page / index-page. <br/>
+- STRING ➡ "Hello world"
+- INTEGER ➡ 99
+- LONG ➡ 98765
+- SINGLE ➡ 99.2932
+- DOUBLE ➡ 983288.18
 
-##### *Main Heading and Content-injection*
+### How to declare variables
 
-From Minima v2.2 onwards, the *home* layout will inject all content from your `index.md` / `index.html` **before** the **`Posts`** heading. This will allow you to include non-posts related content to be published on the landing page under a dedicated heading. *We recommended that you title this section with a Heading2 (`##`)*.
+Delcaring a variable is a way to tell the QBASIC program what type of value will be stored in a variable. We can declare variables using two ways.
 
-Usually the `site.title` itself would suffice as the implicit 'main-title' for a landing-page. But, if your landing-page would like a heading to be explicitly displayed, then simply define a `title` variable in the document's front matter and it will be rendered with an `<h1>` tag.
+- using DIM statements
 
-##### *Post Listing*
-
-This section is optional from Minima v2.2 onwards.<br/>
-It will be automatically included only when your site contains one or more valid posts or drafts (if the site is configured to `show_drafts`).
-
-The title for this section is `Posts` by default and rendered with an `<h2>` tag. You can customize this heading by defining a `list_title` variable in the document's front matter.
-
-
-### Includes
-
-Refers to snippets of code within the `_includes` directory that can be inserted in multiple layouts (and another include-file as well) within the same theme-gem.
-
-  - `disqus_comments.html` &mdash; Code to markup disqus comment box.
-  - `footer.html` &mdash; Defines the site's footer section.
-  - `google-analytics.html` &mdash; Inserts Google Analytics module (active only in production environment).
-  - `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
-  - `custom-head.html` &mdash; Placeholder to allow users to add more metadata to `<head />`.
-  - `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
-  - `social.html` &mdash; Renders social-media icons based on the `minima:social_links` data in the config file.
-
-
-### Sass
-
-Refers to `.scss` files within the `_sass` directory that define the theme's styles.
-
-  - `minima/skins/classic.scss` &mdash; The "classic" skin of the theme. *Used by default.*
-  - `minima/initialize.scss` &mdash; A component that defines the theme's *skin-agnostic* variable defaults and sass partials.
-    It imports the following components (in the following order):
-    - `minima/custom-variables.scss` &mdash; A hook that allows overriding variable defaults and mixins. (*Note: Cannot override styles*)
-    - `minima/_base.scss` &mdash; Sass partial for resets and defines base styles for various HTML elements.
-    - `minima/_layout.scss` &mdash; Sass partial that defines the visual style for various layouts.
-    - `minima/custom-styles.scss` &mdash; A hook that allows overriding styles defined above. (*Note: Cannot override variables*)
-
-Refer the [skins](#skins) section for more details.
-
-
-### Assets
-
-Refers to various asset files within the `assets` directory.
-
-  - `assets/css/style.scss` &mdash; Imports sass files from within the `_sass` directory and gets processed into the theme's
-    stylesheet: `assets/css/styles.css`.
-  - `assets/minima-social-icons.svg` &mdash; A composite SVG file comprised of *symbols* related to various social-media icons.
-    This file is used as-is without any processing. Refer [section on social networks](#social-networks) for its usage.
-
-
-### Plugins
-
-Minima comes with [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) plugin preinstalled to make sure your website gets the most useful meta tags. See [usage](https://github.com/jekyll/jekyll-seo-tag#usage) to know how to set it up.
-
-
-## Usage
-
-Have the following line in your config file:
-
-```yaml
-theme: minima
-```
-
-
-### Customizing templates
-
-To override the default structure and style of minima, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
-e.g., to override the [`_includes/head.html `](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from minima gem folder to `<yoursite>/_includes` and start editing that file.
-
-The site's default CSS has now moved to a new place within the gem itself, [`assets/css/style.scss`](assets/css/style.scss).
-
-In Minima 3.0, if you only need to customize the colors of the theme, refer to the subsequent section on skins. To have your
-*CSS overrides* in sync with upstream changes released in future versions, you can collect all your overrides for the Sass
-variables and mixins inside a sass file placed at `_sass/minima/custom-variables.scss` and all other overrides inside a sass file
-placed at path `_sass/minima/custom.scss`.
-
-You need not maintain entire partial(s) at the site's source just to override a few styles. However, your stylesheet's primary
-source (`assets/css/style.scss`) should contain the following:
-
-  - Front matter dashes at the very beginning (can be empty).
-  - Directive to import a skin.
-  - Directive to import the base styles (automatically loads overrides when available).
-
-Therefore, your `assets/css/style.scss` should contain the following at minimum:
-
-```sass
----
----
-
-@import "minima/skins/{{ site.minima.skin | default: 'classic' }}";
-@import "minima/initialize";
-```
-
-#### Skins
-
-Minima 3.0 supports defining and switching between multiple color-palettes (or *skins*).
+The word DIM stands for DIMENSION. We use *DIM* statement to explicitly declare the variable as a type.
 
 ```
-.
-├── minima.scss
-└── minima
-    └── _syntax-highlighting.scss
+DIM name as string        'Laxmi Prasad Devkota
+DIM height as integer     '120
+DIM price as single       '199.99
 ```
 
+- appending symbols at the end of variable names
+ QBASIC has a set of symbols to represent each variable type
 
-A skin is a Sass file placed in the directory `_sass/minima/skins` and it defines the variable defaults related to the "color"
-aspect of the theme. It also embeds the Sass rules related to syntax-highlighting since that is primarily related to color and
-has to be adjusted in harmony with the current skin.
+- $ String
+- % Integer
+- & Long
+- ! Single
+- \# Double
 
-The default color palette for Minima is defined within `_sass/minima/skins/classic.scss`. To switch to another available skin,
-simply declare it in the site's config file. For example, to activate `_sass/minima/skins/dark.scss` as the skin, the setting
-would be:
-
-```yaml
-minima:
-  skin: dark
-```
-
-As part of the migration to support skins, some existing Sass variables have been retired and some **have been redefined** as
-summarized in the following table:
-
-Minima 2.0      | Minima 3.0
---------------- | ----------
-`$brand-color`  | `$link-base-color`
-`$grey-*`       | `$brand-*`
-`$orange-color` | *has been removed*
-
-##### Available skins
-
-- classic
-- dark
-- solarized
-- solarized-dark
-
-### Customize navigation links
-
-This allows you to set which pages you want to appear in the navigation area and configure order of the links.
-
-For instance, to only link to the `about` and the `portfolio` page, add the following to your `_config.yml`:
-
-```yaml
-header_pages:
-  - about.md
-  - portfolio.md
-```
-
-
-### Change default date format
-
-You can change the default date format by specifying `site.minima.date_format`
-in `_config.yml`.
+We can append these symbols at the end of variable names instead of using DIM statements to declare the type of the variable.
 
 ```
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-minima:
-  date_format: "%b %-d, %Y"
+name$        'Laxmi Prasad Devkota
+height%      '120
+price!       '199.99
 ```
 
+## Array 
 
-### Extending the `<head />`
+Array is a variable which stores different values of the same data type. In array index starts at one.
 
-You can *add* custom metadata to the `<head />` of your layouts by creating a file `_includes/custom-head.html` in your source directory. For example, to add favicons:
+Example:
 
-1. Head over to [https://realfavicongenerator.net/](https://realfavicongenerator.net/) to add your own favicons.
-2. [Customize](#customization) default `_includes/custom-head.html` in your source directory and insert the given code snippet.
+```
+DIM person(3) AS STRING
 
+person(1) = "Prinsha"
+person(2) = "Navadita"
+person(3) = "Prabina"
 
-### Enabling comments (via Disqus)
+FOR x = 1 TO 3
+    rand! = RND * 3
+    y% = INT(rand!)
+    IF y% >= 1 THEN
+        PRINT y%, person(y%),
+    END IF
+NEXT x
 
-Optionally, if you have a Disqus account, you can tell Jekyll to use it to show a comments section below each post.
-
-To enable it, add the following lines to your Jekyll site:
-
-```yaml
-  disqus:
-    shortname: my_disqus_shortname
 ```
 
-You can find out more about Disqus' shortnames [here](https://help.disqus.com/installation/whats-a-shortname).
+## Commands
 
-Comments are enabled by default and will only appear in production, i.e., `JEKYLL_ENV=production`
+Commands are instructions written in a program to do certain things. Often, they are also called as Statements. Since QBASIC is a high level language, those instructions are given using english language which we use in our day to day activities.
 
-If you don't want to display comments for a particular post you can disable them by adding `comments: false` to that post's YAML Front Matter.
+### Adding Comment
 
-:warning: `url`, e.g. `https://example.com`, must be set in you config file for Disqus to work.
+We use comments to add descriptions to a program or code blocks. It makes the code more readable. Comments never gets interpreted and executed.
 
-### Author Metadata
+There are two ways to put a comment in QBASIC.
 
-From `Minima-3.0` onwards, `site.author` is expected to be a mapping of attributes instead of a simple scalar value:
+They are:
 
-```yaml
-author:
-  name: John Smith
-  email: "john.smith@foobar.com"
+- REM keyword (or REMARK)
+- Single quote (')
+
+Example:
+
+```
+'---------------------------------------
+REM This program is all about Covid19
+REM 01/01/2021
+REM Written by : Covid19 (●'◡'●)
+'---------------------------------------
 ```
 
-To migrate existing metadata, update your config file and any reference to the object in your layouts and includes as summarized below:
+### Print
 
-Minima 2.x    | Minima 3.0
-------------- | -------------------
-`site.author` | `site.author.name`
-`site.email`  | `site.author.email`
+We use Print keyword to display symbols, strings and numbers in the console (or Output).
 
+There are two ways to print in QBASIC.
 
-### Social networks
+- PRINT
+- ? (Question mark)
 
-You can add links to the accounts you have on other sites, with respective icon, by adding one or more of the following options in your config.
-From `Minima-3.0` onwards, the usernames are to be nested under `minima.social_links`, with the keys being simply the social-network's name:
+Example:
 
-```yaml
-minima:
-  social_links:
-    twitter: jekyllrb
-    github: jekyll
-    stackoverflow: "11111"
-    dribbble: jekyll
-    facebook: jekyll
-    flickr: jekyll
-    instagram: jekyll
-    linkedin: jekyll
-    pinterest: jekyll
-    telegram: jekyll
-    microdotblog: jekyll
-    keybase: jekyll
-
-    mastodon:
-     - username: jekyll
-       instance: example.com
-     - username: jekyll2
-       instance: example.com
-
-    gitlab:
-     - username: jekyll
-       instance: example.com
-     - username: jekyll2
-       instance: example.com
-
-    youtube: jekyll
-    youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
-    youtube_channel_name: CloudCannon
+```
+Print "Hi there"
+Print "A quick brown fox jumps over the lazy dog"
+? "Hello!"                      ` "Hello"
 ```
 
+### Clear
 
-### Enabling Google Analytics
+Sometimes we my require to clear the screen before we print something useful. We use *CLS* command to clear the screen.
 
-To enable Google Analytics, add the following lines to your Jekyll site:
+You should be careful where to use this command as it will clear everything up from the screen from where it is used.
 
-```yaml
-  google_analytics: UA-NNNNNNNN-N
+Example: The following program only prints *I see you* since *Peek - a - Boo* is cleared by *CLS* command
+
+```
+PRINT "Peek - a - Boo"
+CLS                     ' clears everything before this line
+PRINT "I see you"
 ```
 
-Google Analytics will only appear in production, i.e., `JEKYLL_ENV=production`
+Output : 
+I see you
 
-### Enabling Excerpts on the Home Page
+### Format output
 
-To display post-excerpts on the Home Page, simply add the following to your `_config.yml`:
+We can format output to meet our needs. We can use commas, semi-colons etc along with semi-colons *PRINT* statement to format output.
 
-```yaml
-show_excerpts: true
+- Semi colon (;)
+
+Using semi colon in between PRINT statements makes texts appear next to each other
+
+```
+PRINT "Hello";"World"           ` "Hello World"
 ```
 
+- Comma (,)
 
-## Contributing
+Using comma in between PRINT statements makes texts appear with spaces 
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/jekyll/minima. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+```
+PRINT "Hello","World"           ` "Hello        World"
+```
 
-## Development
+- New line
 
-To set up your environment to develop this theme, run `script/bootstrap`.
+We can use empty PRINT statement to print new line.
 
-To test your theme, run `script/server` (or `bundle exec jekyll serve`) and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme and the contents. As you make modifications, your site will regenerate and you should see the changes in the browser after a refresh.
+Example : The following program prints in separate lines since empty PRINT statement prints a new line
 
-## License
+```
+PRINT "Hello"
+PRINT
+PRINT "World"
+```
 
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+Output :
+
+Hello
+World
+
+- Space or tab
+
+We can use the `SPACE$()` or `TAB()` to add spaces while printing. The functions take integer parameter and prints the corresponding space in the output.
+
+Example:
+
+```
+FOR I = 1 TO L STEP 1
+    PRINT SPACE$(I); I
+NEXT I
+```
+
+### Input
+
+Sometimes we need to ask for certain input from users before we perform some activities in our program. *INPUT* command is used to get input from the user.
+
+When an *INPUT* is encountered, the system halts and waits for user input. We know this when there is a question mark and a blinking cursor in the Output
+
+Example:
+
+```
+DIM grade as integer
+Input "Enter your grade"; grade
+Print "You entered"; grade
+```
+
+### Loop
+
+The process of repeating or printing a series of statements as many times as needed is called loop.
+
+Example: The following program prints from 1 to 100 in sequence using *FOR loop*
+
+```
+FOR z = 1 TO 100
+    PRINT z;
+NEXT z
+```
+
+## Select
+
+SELECT CASE is used to determine the program flow by comparing the value of a variable to specific CASE values.
+
+Example:
+
+SELECT CASE num
+
+    CASE 1
+        PRINT 1;
+        PRINT " - one"
+
+    CASE 2
+        PRINT 2;
+        PRINT " - Two"
+
+    CASE 3
+        PRINT 3;
+        PRINT " - three"
+
+    CASE 4
+        PRINT 4;
+        PRINT " - four"
+
+    CASE 5
+        PRINT 5;
+        PRINT " - five"
+
+END SELECT
+
+## End Statement
+
+It is used at the end of the QBASIC program to terminate it.
+
+Syntax : End
+
+### GOTO statement
+
+The `GOTO` statement branches to a specific line number or to the specified label (or bookmark).
+In the example below, the `GOTO` statement at the end branches the program to the beginning (after the "START" label).
+
+Example:
+
+```
+START:
+
+PRINT "Please enter a number from 1 to 3 ONLY"
+
+PRINT
+
+'INPUT "Please enter a number"; num%
+
+rand! = RND * 3
+num% = INT(rand!)
+
+IF num% = 1 THEN
+    PRINT "It's number 1, Not badd"
+
+ELSEIF num% = 2 THEN
+    PRINT "Ooo, Nice shot anyway ;)"
+
+ELSEIF num% = 3 THEN
+    PRINT "It's number three"
+
+ELSE
+    PRINT "This number is not available, sorryyy :/"
+
+END IF
+
+INPUT "Press enter key to continue"; n
+CLS
+
+GOTO START
+```
+
+### Random number generator
+
+`RANDOMIZE TIMER` initializes the random-number generator. `RND` returns a single-precision random number between 0 and 1. 
+
+The `RND * 6` statement returns a random number that is greater than or equal to 0 and less than 6.   
+
+Example:
+
+```
+RANDOMIZE TIMER
+
+FOR z = 1 TO 10
+    num = RND * 6
+
+    IF num >= 1 THEN
+        PRINT num; "="; INT(num)
+    END IF
+NEXT z
+```
+
+## Conditions
+
+Conditions are used in QBASIC to decide certain actions.
+
+### Conditional operators
+
+Conditional operators means to choose between two or more sections of the program to execute the program.
+
+= , > , < , >= , <= are the examples of conditional operators.
+
+### IF ELSE ENDIF
+
+The IF statement always asks a question (usually about the number in a variable.) If the answer is TRUE the true branch is executed. If the answer if FALSE the true branch goes to the `ELSE` statement. In both cases, the `IF ELSE` statement ends with the `ENDIF` statement.
+
+Example:
+
+```
+INPUT "1 or 2? ", n%
+IF n% = 1 OR 2 THEN
+  PRINT "Oh, ok"
+ELSE
+  PRINT "Number not found"
+END IF
+```
+
+### SELECT
+
+### Joining multiple operators (AND / OR)
+
+## Utility commands
+
+### Left function
+
+`LEFT$` returns specific number of characters from left side to supplied string and returns the value. 
+
+Example:
+
+```
+PRINT LEFT$("hello", 4) 'prints hell
+
+PRINT LEFT$("welcome", 5) 'prints welco
+```
+
+### Right function
+
+`RIGHT$` returns specific number of characters from right side to supplied string and returns the value.
+
+Example:
+
+```
+PRINT RIGHT$("welcome", 4) 'prints come
+```
+
+### UCASE$
+
+The `UCASE$` function converts all the strings to uppercase letters.
+
+Example:
+
+```
+Test$ = "ITS just FoR testing"
+PRINT Test$
+PRINT UCASE$(Test$)
+```
+
+### LCASE$
+
+The `LCASE$` function converts all the strings to lowercase letters.
+
+Example:
+
+```
+Test$ = "ITS just FoR testing"
+PRINT Test$
+PRINT LCASE$(Test$)
+```
+
+### String to ASCII code
+
+ASC returns the ASCII code for the first character in a string expression. 
+
+Example:
+
+```
+PRINT ASC("Q")      'Output is:  81   
+PRINT ASC("Apple")  'Output is:  65
+```
+
+### ASCII code to character
+
+Example:
+
+```
+PRINT CHR$(81)      'Output is:  Q   
+PRINT CHR$(97)      'Output is:  a
+```
+
+### Number to string
+
+...
+
+### String to number
+
+...
+
+## Acronyms
+
+- BASIC (Beginner's All Purpose Symbolic Instruction Code)
+- ASCII (Americain Standard Code for Information Interchange)
+
+## Reference
+
+1: http://pittajarn.lpru.ac.th/~nukit/basic/tutorial_basic.pdf   
+2: https://www QBASIC.net/en QBASIC-tutorials/beginner QBASIC-beginner-1.htm

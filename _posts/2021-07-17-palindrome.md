@@ -4,6 +4,17 @@ title: "Check if a string is palindrome"
 render_with_liquid: false
 ---
 
+## Definition
+A palindrome is a word, number, phrase, or other sequence of characters which reads the same backward as forward, such as madam or racecar.
+
+## Algorithm
+1. Start
+1. Ask for input
+1. Remove the space from the given string
+1. Reverse the given string
+1. Print the result
+1. End
+
 ```
 REM "Write a program to check if a given string is PALINDROME"
 
@@ -59,3 +70,40 @@ FUNCTION strip_space$ (word$)
     strip_space$ = temp$
 END FUNCTION
 ```
+
+## Description
+
+<!-- **MID$ :**
+
+This function is used to extract characters from the given string. 
+
+Example :
+
+
+`MID$("apple", 2, 2)` returns *pp*
+
+The following program returns two characters, *go* from the fourth position of the string "mango"
+```
+fruit$ = "mango"
+MID$(fruit$, 4, 2) 
+```
+
+**LCASE$ :**
+
+This function returns the string in lowercase.
+
+Example :
+
+`LCASE$("HELLOWORLD")` returns *helloworld*
+
+(Similarly, `UCASE$` returns the string the uppercase)
+
+[Reference: Our GitHub](https://github.com/avecnavadita/QBASIC) -->
+
+**Function Procedure**
+
+A Function procedure is a series of Visual Basic statements enclosed by the Function and End Function statements. The Function procedure performs a task and then returns control to the calling code. When it returns control, it also returns a value to the calling code.
+
+**Sub Procedure**
+
+A Sub procedure is a series of Visual Basic statements enclosed by the Sub and End Sub statements. The Sub procedure performs a task and then returns control to the calling code, but it does not return a value to the calling code.
