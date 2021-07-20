@@ -6,6 +6,9 @@ title: "Print alphabets with their ASCII CODE"
 ## Introduction
 This program prints alphabets with their ASCII Code.
 
+# What is a ASCII Code?
+ASCII Code is a code for representing English characters as numbers
+
 ## Algorithm
 1. Start
 1. Make a variable for the ASCII code of caital A to Z
