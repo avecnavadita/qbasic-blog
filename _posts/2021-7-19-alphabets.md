@@ -5,13 +5,15 @@ title: "Print alphabets with their ASCII CODE"
 
 ```
 REM "---------------------------------------"
-REM "Prints alphabets from a to z and z to a"
+REM "Prints alphabets from a to z and A to Z
 REM "---------------------------------------"
 
-A% = 65
-Z% = 90
-sa% = 97
-sz% = 122
+'ASCII code for A and Z
+A% = ASC("A")
+Z% = ASC("Z")
+'ASCII code for a and z
+sa% = ASC("a")
+sz% = ASC("z")
 
 PRINT "Alphabets with their ASCII code"
 PRINT
@@ -24,26 +26,10 @@ NEXT m%
 PRINT
 PRINT
 
-REM "prints alphabets with their ASCII code from Z to A"
-FOR s% = Z% TO A% STEP -1
-    PRINT CHR$(s%); " = "; s%; "  ";
-NEXT s%
-
-PRINT
-PRINT
-
 REM "Prints alphabets with their ASCII code from a to z"
 FOR n% = sa% TO sz% STEP 1
     PRINT CHR$(n%); " = "; n%; "  ";
 NEXT n%
-
-PRINT
-PRINT
-
-REM "Prints alphabets with their ASCII code from z to a"
-FOR j% = sz% TO sa% STEP -1
-    PRINT CHR$(j%); " = "; j%; "  ";
-NEXT j%
 
 END
 ```
