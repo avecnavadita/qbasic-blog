@@ -8,11 +8,9 @@ This program prints alphabets with their ASCII Code.
 
 ## Algorithm
 1. Start
-1. Make a variable for the ASCII code of caital A to Z
-1. Make a variable for the ASCII code of small a to z
-1. Just display "Alphabets with their ASCII code"
-1. Print alphabets with their ASCII code of capital A to Z
-1. Print alphabets with their ASCII code of small a to z
+1. Get ASCII code for A and Z
+1. Print character and ASCII code for A
+1. Repeat step 3 for all characters until Z
 1. End
 
 ## Program
