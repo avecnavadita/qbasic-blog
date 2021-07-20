@@ -1,19 +1,19 @@
 ---
 layout: post
-title: "Prints only numbers, alphabets and spaces"
+title: "Cleans the given string"
 ---
 
 ## Introduction
-This program prints numbers, alphabets and spaces ONLY.
+This program extracts **ONLY** numbers, alphabets and spaces from the given string and prints the clean string.
 
 ## Algorithm
 1. Start
-1. Ask for input
+1. Ask for input string
 1. Get each character from the string
 1. Convert the character to its ASCII code
-1. Check for A to Z  (A=65 / Z=91)
-1. Check for 0 to 9 (0=41 / 9=57)
-1. Check for space (space=32)
+1. Check for A to Z (A=65 / Z=91) and append in a global variable
+1. Check for 0 to 9 (0=41 / 9=57) and append in a global variable
+1. Check for space (space=32) and append in a global variable
 1. Repeat the above steps(from step 3 onwards) for all the characters in the string
 1. Print the result
 1. End
@@ -51,7 +51,7 @@ NEXT x%
 PRINT result$
 ```
 
-OR
+Hre's the same program using function
 
 ```
 REM "a program to extract alphabets and numbers from the given string"
@@ -67,13 +67,11 @@ clearText$ = alphaNum$(sentence$)
 PRINT clearText$
 
 'for all the characters in the given string
-
 FUNCTION alphaNum$ (sentence$)
     FOR x% = 1 TO LEN(sentence$)
 
         'get each character from the string
         char$ = (MID$(sentence$, x%, 1))
-        'charUcase$ = UCASE$(char$)
 
         'convert the character to its ASCII code
         code% = ASC(UCASE$(char$))
@@ -82,11 +80,11 @@ FUNCTION alphaNum$ (sentence$)
         IF code% >= 65 AND code% <= 90 THEN
             result$ = result$ + char$
 
-            'check for 0 to 9       (0=41 / 9=57)
+        'check for 0 to 9 (0=41 / 9=57)
         ELSEIF code% >= 48 AND code% <= 57 THEN
             result$ = result$ + char$
 
-            'check for space      (space=32)
+        'check for space (space=32)
         ELSEIF code% = 32 THEN
             result$ = result$ + char$
         END IF
