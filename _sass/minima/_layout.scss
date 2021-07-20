@@ -1,14 +1,19 @@
 /**
  * Site header
  */
-.site-header {
-  border-top: 5px solid $border-color-03;
-  border-bottom: 1px solid $border-color-01;
-  min-height: $spacing-unit * 1.865;
-  line-height: $base-line-height * $base-font-size * 2.25;
+ .site-header {
+  /* border-top: 5px solid #424242; */
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 4rem;
+  line-height: 4rem;
 
   // Positioning context for the mobile navigation icon
   position: relative;
+}
+
+.wrapper a.site-title {
+  letter-spacing: 1px;
+  // font-size: 2rem;
 }
 
 .site-title {
