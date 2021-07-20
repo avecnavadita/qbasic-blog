@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cleans the given string"
+title: "Clean the given string"
 ---
 
 ## Introduction
