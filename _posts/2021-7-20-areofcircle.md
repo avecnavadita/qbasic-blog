@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Finds the area of a circle"
+title: "Find the area of a circle"
 ---
 
 ## Introduction
