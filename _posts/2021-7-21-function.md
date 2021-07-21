@@ -1,7 +1,6 @@
 ---
 layout: post
-title: "Check if a string is palindrome"
-render_with_liquid: false
+title: "Function"
 ---
 
 ## Function
